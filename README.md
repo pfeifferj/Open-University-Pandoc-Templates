@@ -8,21 +8,28 @@ Add tutor name on title page.
 
 Nicer demo content
 
-# Dependencies
+# Usage
+## Dependencies
 * LaTeX
-
 * Texlive LaTeX extra
-
 * Texlive tilting
-
 * Pandoc
 
-# Compile
+## Install
+Move the template eisvogel.latex to your pandoc templates folder. The location of the templates folder depends on your operating system:
 
-## PDF
+* Unix, Linux, macOS: `$XDG_DATA_HOME/pandoc/templates`, `~/.pandoc/templates/` or `/usr/share/pandoc/data/templates/`
+* Windows XP: `C:\Documents And Settings\USERNAME\Application Data\pandoc\templates`
+* Windows Vista or later: `C:\Users\USERNAME\AppData\Roaming\pandoc\templates`
+
+If there are no folders called templates or pandoc you need to create them and put the template eisvogel.latex inside.
+
+## Compile
+
+### PDF
 `pandoc "template.md" -o "template.pdf" --from markdown --template "eisvogel.latex" --filter pandoc-citeproc --bibliography "references.bib"`
 
-## DOCX
+### DOCX
 `pandoc "template.md" -o "template.docx" --from markdown --template "eisvogel.latex" --filter pandoc-citeproc --bibliography "references.bib"`
 
 Note: Table of contents is not automatically displayed in some text editors such as google docs and libre office
