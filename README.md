@@ -3,12 +3,6 @@
 
 Based on [eisvogel pandoc LaTeX templates](https://github.com/Wandmalfarbe/pandoc-latex-template)
 
-# TODO
-- [ ] Nicer demo content
-- [ ] Write command-line tool to:
-* Generate reusable profiles ie. for modules
-* Create documents using saved profiles
-* Import TMA questions & guidance notes into document from OU pdfs
 
 # Using
 ## Dependencies
@@ -27,10 +21,13 @@ Move the template eisvogel.latex to your pandoc templates folder. The location o
 If there are no folders called templates or pandoc you need to create them and put the template eisvogel.latex inside.
 
 ## Writing
-## Spell Check
+### Importing Presets
+You can save settings such as author, module name, tutor etc. in a yaml file and use it to create new documents using [pandocomatic](https://github.com/htdebeer/pandocomatic).
+
+### Spell Check
 If you're using vim as your text editor, don't forget to [enable spell check](https://www.linux.com/learn/using-spell-checking-vim). 
 
-## Referencing
+### Referencing
 1. Create a reference in references.bib 
 
 Example:
