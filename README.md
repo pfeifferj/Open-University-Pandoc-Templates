@@ -50,6 +50,36 @@ Example:
 
 2. Reference in text using `[@smit54]` 
 
+#### Common OU specific questions
+##### How do I cite online/module content?
+
+Example:
+
+```
+@ONLINE{jj19,
+	AUTHOR = {{Johnson {\&} Johnson}},
+	TITLE = {Who we are},
+	YEAR = {2019},
+	URL = {http://www.jnj.ch/en/about-us/who-we-are.html},
+	URLDATE = {2019-06-27}
+```
+
+Prints:
+
+```
+Johnson & Johnson (2019e) Who we are [Online]. Available at http://www.jnj.ch/en/aboutus/who-we-are.html (Accessed 27 June 2019).
+```
+
+##### How do I spell out the author name if it is a company or organisation?
+
+Wrap the author in ``{{ }}``
+
+##### Why are capitalisations lost in titles?
+
+This is not a bug; it's a feature.
+
+Wrap the title in ``{{ }}``
+
 ## Compiling
 
 ### PDF
@@ -58,4 +88,4 @@ Example:
 ### DOCX
 `pandoc "template.md" -o "template.docx" --from markdown --template "eisvogel.latex" --filter pandoc-citeproc --bibliography "references.bib"`
 
-Note: Table of contents is not automatically displayed in some text editors such as google docs and libre office
+Note: Table of contents is not automatically displayed in text editors such as google docs and libre office
