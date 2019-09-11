@@ -4,14 +4,14 @@
 Based on [eisvogel pandoc LaTeX templates](https://github.com/Wandmalfarbe/pandoc-latex-template)
 
 
-# Using
+# Usage
 ## Dependencies
 * LaTeX
 * Texlive LaTeX extra
 * Texlive tilting
 * Pandoc
 
-## Installing
+## Install
 Move the template eisvogel.latex to your pandoc templates folder. The location of the templates folder depends on your operating system:
 
 * Unix, Linux, macOS: `$XDG_DATA_HOME/pandoc/templates`, `~/.pandoc/templates/` or `/usr/share/pandoc/data/templates/`
@@ -23,6 +23,11 @@ If there are no folders called templates or pandoc you need to create them and p
 ## Writing
 ### Importing Presets
 You can save settings such as author, module name, tutor etc. in a yaml file and use it to create new documents using [pandocomatic](https://github.com/htdebeer/pandocomatic).
+
+### Count Words
+`wordcount.lua` is included in the repo. The filter counts body text and ignores metadata, headings, references etc.
+
+`pandoc --lua-filter wordcount.lua myfile.md`
 
 ### Spell Check
 If you're using vim as your text editor, don't forget to [enable spell check](https://www.linux.com/learn/using-spell-checking-vim). 
